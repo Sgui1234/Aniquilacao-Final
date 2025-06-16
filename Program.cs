@@ -125,7 +125,7 @@ namespace Aniquilação_Final
                 { 
                     Mensagens.Texto("<== Aniquilação Final ==>\n", "red");
                     Mensagens.Texto($"Estátisticas do(a) {P.getNome()}\n", "blue");
-                    Console.WriteLine("Dia: {0}\nLevel: {1} (XP: {2}/{3})\nRaça: {4}\nClasse: {5}\nVida: {6}/{7}\nMana: {8}/{9}\nEstamina: {10}/{11}\n", P.getDia(), P.getLvl(),P.getXp(), 10 + (P.getLvl() * 2), P.getVida(), P.getVidaMax(), P.getMana(), P.getManaMax(), P.getEstamina(), P.getEstaminaMax());
+                    Console.WriteLine("Dia: {0}\nLevel: {1} (XP: {2}/{3})\nRaça: {4}\nClasse: {5}\nVida: {6}/{7}\nMana: {8}/{9}\nEstamina: {10}/{11}\n", P.getDia(), P.getLvl(),P.getXp(), 10 + (P.getLvl() * 2),P.getRaca(),P.getClasse() ,P.getVida(), P.getVidaMax(), P.getMana(), P.getManaMax(), P.getEstamina(), P.getEstaminaMax());
                     Console.ReadKey();
                 }
                 Console.Clear();
