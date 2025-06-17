@@ -16,7 +16,7 @@ namespace Aniquilação_Final
         private int estaminaMax;
         private int xp = 0;
         private int dia = 1;
-
+        private int moedas = 10;
         private int raca;
         private int classe;
 
@@ -143,6 +143,14 @@ namespace Aniquilação_Final
         {
             return xp;
         }
+        public void setMoedas(int moeda)
+        {
+            moedas += moeda;
+        }
+        public int getMoedas()
+        {
+            return moedas;
+        }
         public int getManaAtaque(int x)
         {
             return manaAtaques[x];
@@ -175,11 +183,26 @@ namespace Aniquilação_Final
         {
             return manaMax;
         }
-        public void setStatus()
+        public void setStatus(string status)
         {
-            estamina = estaminaMax;
-            vida = vidamax;
-            mana = manaMax;
+            if(status == "Mana")
+            {
+                mana = manaMax;
+            }
+            else if(status == "Estamina")
+            {
+                estamina = estaminaMax;
+            }
+            else if (status == "Vida")
+            {
+                vida = vidamax;
+            }
+            else
+            {
+                vida = vidamax;
+                estamina = estaminaMax;
+                mana = manaMax;
+            }
         }
         public void setVidaMax(int v)
         {
