@@ -14,8 +14,8 @@ namespace Aniquilação_Final
         {
             Random rng = new Random();
             nome = nomeInimigo[rng.Next(0,2)];
-            if (lvlp < 6) { lvl = rng.Next(1, 6); }
-            else { lvl = rng.Next(lvlp - 3, lvlp + 3); }
+            if (lvlp < 6) { lvl = rng.Next(1, 5); }
+            else { lvl = lvlp/3; }
             vida = lvl * 3;
             vida -= rng.Next(lvl);
             vidamax = vida;
@@ -24,11 +24,21 @@ namespace Aniquilação_Final
             {
                 ataques[0] = "Mordida";
                 DanoAtaques[0] = 5;
+                if (lvl >= 5)
+                {
+                    ataques[1] = "Uivo Espectral";
+                    DanoAtaques[1] = 5;
+                }
             }
             else if (nome == "Goblin")
             {
                 ataques[0] = "Espadada";
                 DanoAtaques[0] = 5;
+                if(lvl >= 5)
+                {
+                    ataques[1] = "Ladroagem";
+                    DanoAtaques[1] = 5;
+                }
             }
         }
 
@@ -38,7 +48,8 @@ namespace Aniquilação_Final
             if (ataques[1] != null)
             {
                 Random ataque = new Random();
-                return 1;
+                int atk = ataque.Next(0, 2);
+                return atk;
 
             }
             else

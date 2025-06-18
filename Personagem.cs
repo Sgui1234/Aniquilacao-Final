@@ -24,9 +24,16 @@ namespace Aniquilação_Final
         {
             ataques[x] = ataque;
         }
-        public int getDanoAtaques(int x)
+        public int getDanoAtaques(int x, int lvl)
         {
-            return DanoAtaques[x];
+            if(lvl == 1)
+            {
+                return DanoAtaques[x];
+            }
+            else
+            {
+                return DanoAtaques[x] * (lvl / 2);
+            }
         }
         public void setDanoAtaques(int x, int dano)
         {
@@ -43,6 +50,10 @@ namespace Aniquilação_Final
         public void setVida(int v)
         {
             vida -= v;
+        }
+        public void setVidaTotal()
+        {
+            vida = vidamax;
         }
       
         public int getVidaMax()
